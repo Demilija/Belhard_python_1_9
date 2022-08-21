@@ -10,3 +10,17 @@
 Подсказка:
 Понадобится позитивный просмотр вперед (?=чтото)
 """
+import re
+
+
+def check_password():
+    password = input('Enter your password')
+    pattern = "^.*(?=.{8,40})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$"
+    result = re.findall(pattern, password)
+    if result:
+        print("Ok password")
+    else:
+        print("Password is not valid")
+
+
+check_password()
