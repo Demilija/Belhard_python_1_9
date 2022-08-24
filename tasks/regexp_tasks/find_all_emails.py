@@ -7,11 +7,11 @@ import re
 
 def find_emails():
     emails = input("text")
-    pattern = "^.*[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}.*$"
+    pattern = "^.*[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+[a-zA-Z]{2,6}.*$"
     res = re.findall(pattern, emails)
 
     if res:
-        print('Found email')
+        print('Found emails')
     else:
         print("No")
 
