@@ -8,7 +8,7 @@ import re
 
 def count_words():
     text = input("Add your text here")
-    lst = re.findall("\S+", text)
+    lst = re.findall(r'\S+', text)
     print(len(lst))
 
 
