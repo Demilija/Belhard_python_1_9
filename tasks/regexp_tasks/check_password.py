@@ -15,8 +15,7 @@ import re
 
 def check_password():
     password = input('Enter your password')
-    pattern = "^.*(?=.{8,40})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$"
-    result = re.findall(pattern, password)
+    result = re.findall(r'^.*(?=.{8,40})(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$', password)
     if result:
         print("Ok password")
     else:
