@@ -8,7 +8,6 @@
 import logging
 from logging.handlers import TimedRotatingFileHandler
 
-
 logging.basicConfig(
     level=logging.DEBUG,
     filename="log_journal.txt"
