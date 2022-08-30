@@ -11,3 +11,17 @@
 
 Например: +375(29)365-12-12
 """
+import re
+
+
+def check_phone():
+    phone = input('Enter your phone number')
+    result = re.findall(r'^\+375\((29|25|44|33)\)(\d{3})-(\d{2})-(\d{2})$', phone)
+
+    if result:
+        print("Valid phone number")
+    else:
+        print("Is not phone number")
+
+
+check_phone()
